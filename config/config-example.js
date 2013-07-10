@@ -2,7 +2,7 @@
 exports.port = 8000;
 
 // The server ID - a unique ID describing this Showdown server
-exports.serverid = 'testserver';
+exports.serverid = 'PokeMania';
 
 // proxyip - proxy IPs with trusted X-Forwarded-For headers
 //   This can be either false (meaning not to trust any proxies) or an array
@@ -14,7 +14,7 @@ exports.proxyip = false;
 // login server data - don't forget the http:// and the trailing slash
 //   This is the URL of the user database and ladder mentioned earlier.
 //   Don't change this setting - there aren't any other login servers right now
-exports.loginserver = 'http://play.pokemonshowdown.com/';
+exports.loginserver = 'http://pokemania.psim.com/';
 exports.loginserverkeyalgo = "RSA-SHA1";
 exports.loginserverpublickeyid = 2;
 exports.loginserverpublickey = "-----BEGIN RSA PUBLIC KEY-----\n" +
@@ -184,7 +184,7 @@ exports.appealurl = '';
 //     - potd: Set PotD.
 //     - forcewin: /forcewin command.
 //     - battlemessage: /a command.
-exports.groupsranking = [' ', '+', '%', '@', '#', '&', '~'];
+exports.groupsranking = ['/', '+', '%', '@', '#', '&', '~'];
 exports.groups = {
 	'~': {
 		id: "admin",
@@ -209,7 +209,7 @@ exports.groups = {
 	'#': {
 		id: "owner",
 		name: "Room Owner",
-		inherit: '@',
+		inherit: '**',
 		jurisdiction: 'u',
 		roommod: true,
 		declare: true,
@@ -250,11 +250,11 @@ exports.groups = {
 	'+': {
 		id: "voice",
 		name: "Voice",
-		inherit: ' ',
+		inherit: '/',
 		broadcast: true,
 		rank: 1
 	},
-	' ': {
+	'/': {
 		ip: 's',
 		alts: 's',
 		rank: 0
